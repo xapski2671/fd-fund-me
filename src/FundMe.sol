@@ -79,6 +79,7 @@ contract FundMe {
 
     function cheaperWithdraw() public onlyOwner {
         address[] memory funders = s_funders;
+        // reading s_funders into memory, gasOp
         // mappings can't be in memory, sorry!
         for (
             uint256 funderIndex = 0;
